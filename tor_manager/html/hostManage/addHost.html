@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <link rel="stylesheet" type="text/css" href="/static/tor_back.css"/>
+
+<script type="text/javascript">
+
+function validate_required(field, alerttxt)
+{
+  with (field)
+  {
+    if (value==null || value=="")
+      {alert(alerttxt);return false}
+    else 
+      {return true}
+  }
+}
+
+function validate_form(thisform)
+{
+  with (thisform)
+  {
+    if (validate_required(hostname,"'hostname'不可为空!") == false)
+      {hostname.focus();return false}
+    if (validate_required(ip,"'ip'不可为空!") == false)
+      {ip.focus();return false}
+    return true
+  }
+}
+</script>
+
+
+</head>
+  
+<body backcolor=pink>
+  <center>
+    <h1>添加主机</h1>
+    <form onsubmit="return validate_form(this)" action="/host"method="post">
+    <table class="t1" border="1">
+      <tr>
+        <td>hostname：</td>
+        <td><input type="text" name="hostname" id="hostname"></td>
+      </tr>
+      <tr>
+        <td>ip：</td>
+        <td><input type="ip" name="ip" id="ip"></td>
+      </tr> 
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="保存"> <input type="reset" value="重置"></td>
+      </tr>
+      </table>
+    </form>
+  </center>
+</body>
+</html>

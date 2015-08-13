@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <link rel="stylesheet" type="text/css" href="/static/tor_back.css"/>
+</head>
+  
+<body backcolor=pink>
+  <center>
+    <h1>添加用户</h1>
+    <form name="f1" action="successAdd.html"method="post">
+     
+    <table class="t1" border="1">
+      <tr>
+        <td>用户登录名：</td>
+        <td><input type="text" name="username" id="username"></td>
+      </tr>
+      <tr>
+        <td>密码：</td>
+        <td><input type="password" name="password" id="password"></td>
+      </tr> 
+      <tr>
+        <td>权限：</td>
+        <td>
+          <select name="type">
+            <option value="1">超级管理员</option>
+            <option value="2">集群管理员</option>
+            <option value="3">普通用户</option>
+          </select>
+        </td>
+      </tr>
+      <tr><td>姓名：</td><td><input type="text" name="xingming" value="王五"></td></tr>
+      <tr><td>性别：</td><td><input type="text" name="xingbie" value="男"></td></tr>
+      <tr><td>电话号码：</td><td><input type="text" name="haoma" value="123456"></td></tr>
+      <tr><td>邮箱：</td><td><input type="text" name="youxiang" value="456"></td></tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="保存用户信息"></td>
+      </tr>
+      </table>
+    </form>
+  </center>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SohuVideoCloud</title>
+<link rel="stylesheet" type="text/css" href="/static/tor_back.css" />
+  <script language="javascript">
+    function test(ch){
+      var childObj=document.getElementById("menu_down"+ch);
+        if(childObj.style.display=='none'){
+          childObj.style.display='block';
+        }
+        else
+        {
+          childObj.style.display='none';
+        }
+    return;
+  }
+</script>
+</head>
+<body>
+  <div id="container">
+      <div id="banner">
+         <div id="globallink">
+         <p align="left" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">欢迎你: {{username}}! &nbsp;&nbsp;&nbsp; <a href="/">退出</a>  </p>
+         </div>
+       </div>
+       <div id="left">
+          <div id="menu"><a onClick="test(1)">用户管理</a></div>
+          <div id="menu_down1"  class="menu_down"  style="display:block">
+            <ul>
+              <li><a href="/?ori=user" target="main">添加用户</a></li>
+              <li><a href="/user"  target="main">查看用户</a></li>
+            </ul>
+          </div>
+          <div id="menu"><a onClick="test(2)">主机管理</a></div>
+          <div id="menu_down2" class="menu_down"  style="display:block">
+            <ul>
+              <li><a href="/?ori=host" target="main">添加主机</a></li>
+              <li><a href="/host" target="main">查看主机</a></li>
+            </ul>
+          </div>
+     </div>
+     <div id="main">
+       <iframe name="main" id="main" frameborder="0" width="100%" onload="this.height=main.document.body.scrollHeight">
+       </iframe>
+     </div>
+     <div id="foot">
+     <center>
+        <pre>
+         <br>
+        </pre>
+     </center>
+     </div>
+  </div>
+</body>
+</html>

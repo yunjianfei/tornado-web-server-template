@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <link rel="stylesheet" type="text/css" href="/static/tor_back.css"/>
+</head>
+  
+<body>
+     
+  <h1>主机详情</h1>
+  <center>
+    <table border="1" class="t2">
+      <tr>
+        <td>HostID：</td>
+        <td> {{host['host_id']}} </td>
+      </tr>
+      <tr>
+        <td>hostname</td>
+        <td> {{host['hostname']}} </td>
+      </tr>
+      <tr>
+        <td>IP：</td>
+        <td> {{host['ip']}} </td>
+      </tr>
+      <tr>
+        <td>Worker数：</td>
+        <td> {{host['worker_num']}} </td>
+      </tr>
+      <tr>
+        <td>创建时间：</td>
+        <td> {{host['create_time']}} </td>
+      </tr>
+      <tr>
+        <td>CPU线程数：</td>
+        <td> {{host['cpu_count']}} </td>
+      </tr>
+      <tr>
+        <td>内存：</td>
+        <td> {{host['memory']}} GB</td>
+      </tr>
+      <tr>
+        <td>操作系统：</td>
+        <td> {{host['os']}} </td>
+      </tr>
+      <tr>
+        <td>备注：</td>
+        <td> {{host['comment']}} </td>
+      </tr>
+    </table>
+    <br>
+    <a href="/host"> 返回上一页 </a>
+    <br>
+    <br>
+  </center>
+</body>
+</html>
