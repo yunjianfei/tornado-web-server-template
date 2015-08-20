@@ -11,7 +11,7 @@ import json
 import urllib
 import logging,time
 from tornado.httpclient import HTTPClient
-from svc_lib.httpresponse import ResponseCode
+from tor_manager.util.httpresponse import ResponseCode
 
 def make_qs(qdict):
     if qdict == None:
